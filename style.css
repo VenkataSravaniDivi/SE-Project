@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .drag-area {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+  }
+  
+  .drag-area.dragover {
+    background-color: #f0f8ff;
+  }
+  
+  #templateList, #placeholderList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #templateList li, #placeholderList li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button.delete {
+    background: #dc3545;
+  }
+  

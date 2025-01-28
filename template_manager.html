@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Template Manager</h1>
+
+  <section>
+    <h2>Upload Template</h2>
+    <form id="uploadTemplateForm">
+      <input type="file" id="templateFile" accept=".docx, .html">
+      <button type="submit">Upload Template</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Uploaded Templates</h2>
+    <ul id="templateList"></ul>
+  </section>
+
+  <section>
+    <h2>Drag-and-Drop Editor</h2>
+    <div class="drag-area" id="dragArea">Drag and Drop Your Content Here</div>
+  </section>
+
+  <section>
+    <h2>Placeholder Configuration</h2>
+    <div>
+      <input type="text" id="placeholderInput" placeholder="Add Placeholder (e.g., [Name])">
+      <button id="addPlaceholderBtn">Add Placeholder</button>
+    </div>
+    <ul id="placeholderList"></ul>
+  </section>
+
+  <script src="template_manager.js"></script>
+</body>
+</html>
