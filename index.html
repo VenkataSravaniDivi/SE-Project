@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: #007BFF;
+    }
+    form, .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="file"], input[type="text"], select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Document Generator Tool</h1>
+
+  <!-- Template Management -->
+  <section class="section">
+    <h2>Template Management</h2>
+    <form id="uploadTemplateForm">
+      <div class="form-group">
+        <label for="templateFile">Upload Template (.docx, .html):</label>
+        <input type="file" id="templateFile" accept=".docx, .html">
+      </div>
+      <button type="submit">Upload Template</button>
+    </form>
+    <h3>Uploaded Templates:</h3>
+    <ul id="templateList"></ul>
+  </section>
+
+  <!-- Data Upload -->
+  <section class="section">
+    <h2>Data Upload</h2>
+    <form id="uploadDataForm">
+      <div class="form-group">
+        <label for="dataFile">Upload Data File (.csv, .xlsx):</label>
+        <input type="file" id="dataFile" accept=".csv, .xlsx">
+      </div>
+      <button type="submit">Upload Data</button>
+    </form>
+    <h3>Uploaded Data Fields:</h3>
+    <ul id="dataFields"></ul>
+  </section>
+
+  <!-- Field Mapping -->
+  <section class="section">
+    <h2>Field Mapping</h2>
+    <div id="mappingContainer">
+      <p>No data fields or placeholders loaded yet. Upload data and template to proceed.</p>
+    </div>
+  </section>
+  <div id="mappingContainer">
+    <!-- Field mapping dropdowns will be dynamically appended here -->
+</div>
+
+
+  <!-- Batch Processing -->
+  <section class="section">
+    <h2>Batch Processing</h2>
+    <button id="generatePDFsBtn">Generate PDFs</button>
+    <h3>Generated Files:</h3>
+    <ul id="generatedFiles"></ul>
+    <button id="downloadZipBtn">Download All as ZIP</button>
+  </section>
+
+  <!-- Email Delivery -->
+  <section class="section">
+    <h2>Email Delivery</h2>
+    <form id="emailForm">
+      <div class="form-group">
+        <label for="emailAddress">Recipient Email:</label>
+        <input type="text" id="emailAddress" placeholder="Enter recipient email">
+      </div>
+      <button type="submit">Send PDFs via Email</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
